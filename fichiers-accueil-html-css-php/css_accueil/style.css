@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 128, 0.25), rgba(0, 0, 128, 0.23)), url(/MES_PROJETS/TP_PHP/images/des-serveurs.png) no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu';
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: none;
+}
+
+
+/* menu d'entête */
+
+.header {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    background-color: rgba(0, 0, 128, 0.751);
+    margin: 0 0 1em;
+    position: sticky;
+    top: 0px;
+}
+
+.header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.header nav>ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.header nav ul li:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.header nav ul li:last-child {
+    padding: 0;
+    margin: 0;
+}
+
+.arbre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.arbre a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #e9a82a;
+    margin: 0 2px;
+}
+
+.arbre a span:last-child {
+    font-size: 18px;
+}
+
+.arbre a:hover {
+    color: white;
+    text-shadow: 5px #e9a82a;
+}
+
+.home {
+    width: 100px;
+    height: auto;
+}
+
+.folder {
+    width: 90px;
+    height: auto;
+}
+
+
+/* 
+*****
+*****
+*****
+*****
+*****
+*/
+
+
+/* défilement */
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 128, 0.751);
+    margin: 5em 0;
+    position: sticky;
+    top: 80vh;
+}
+
+footer nav {
+    width: 100%;
+    display: flex;
+}
+
+footer nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer nav ul li a div {
+    width: 150px;
+    height: 100px;
+    padding: 20px;
+    background-color: #e9a82a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: navy;
+    text-shadow: 1px 1px 1px white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.arriere {
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+
+.avance {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
