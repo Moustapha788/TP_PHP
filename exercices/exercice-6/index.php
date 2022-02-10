@@ -20,14 +20,14 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
         echo $errorMsg;
     }
     // fonction qui peremet de styliser l'erreur afficher par error_message()
-    function ifClassError(string $nameSessionError, string $key):void{
-        if($_SESSION[$nameSessionError][$key]) echo ' classError';
+    function ifClassError(string $nomSessionError, string $key):void{
+        if($_SESSION[$nomSessionError][$key]) echo ' classError';
     }
 
-    function displayValue(string $nameSessionValue,string $nameSessionError,string $value,):void{
-        if(isset($_SESSION[$nameSessionValue])):
-            if(isset($_SESSION[$nameSessionError][$value])):
-                error_message($_SESSION[$nameSessionError][$value]);
+    function displayValue(string $nameSessionValue,string $nomSessionError,string $value,):void{
+        if(!isset($_SESSION[$nameSessionValue])):
+            if(isset($_SESSION[$nomSessionError][$value])):
+                error_message($_SESSION[$nomSessionError][$value]);
             else:  
                 echo  $_SESSION[$nameSessionValue][$value]; 
             endif;
@@ -49,21 +49,21 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
         <div class="form-groups">
             <!-- Saisie de la valeur de a -->
             <div class="champ_de_saisie">
-                <label for="value_of_a" class="labels">a</label>
-                <input type="text" id="value_of_a" name="value_of_a" class="champ_item <?php ifClassError('error','value_of_a')?>" value="<?php displayValue('post','error','a');?>">
+                <label for="a" class="labels">a</label>
+                <input type="text" id="a" name="a" class="champ_item <?php ifClassError('error','a')?>" value="<?php displayValue('post','error','a');?>">
             </div>
 
 
             <!-- Saisie de la valeur de b -->
             <div class="champ_de_saisie">
-                <label for="value_of_b" class="labels">b</label>
-                <input type="text" id="value_of_b" name="value_of_b" class="champ_item <?php ifClassError('error','value_of_b')?>" value="<?php displayValue('post','error','b');?>">
+                <label for="b" class="labels">b</label>
+                <input type="text" id="b" name="b" class="champ_item <?php ifClassError('error','b')?>" value="<?php displayValue('post','error','b');?>">
             </div>
 
             <!-- Saisie de la valeur de c -->
             <div class="champ_de_saisie">
-                <label for="value_of_c" class="labels">c</label>
-                <input type="text" id="value_of_c" name="value_of_c" class="champ_item <?php ifClassError('error','value_of_c')?>" value="<?php displayValue('post','error','c');?>">
+                <label for="c" class="labels">c</label>
+                <input type="text" id="c" name="c" class="champ_item <?php ifClassError('error','c')?>" value="<?php displayValue('post','error','c');?>">
             </div>
            
             <!-- Validation -->
@@ -81,6 +81,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
 
 <?php 
 if(isset($_SESSION['error'])){
+    $_SESSION[$nomSessionError];
     unset($_SESSION['error']);
 }
 /*  défilement*/
