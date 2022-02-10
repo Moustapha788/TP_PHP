@@ -1,6 +1,6 @@
 <?php
 // Constantes définies
-define("VALUE_MINIMUM",1);
+define("VALUE_MINIMUM",10000);
 
 // fonction qui permet de récupérer un chiffre(ici entier) dans une chaîne de caractères
 function filtrerNombre(string $chaine):int{
