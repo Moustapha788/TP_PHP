@@ -31,32 +31,32 @@ $moisEn=array(
     11=>'November',
     12=>'Décember',
 );
-// fonction 
+// fonction qui affiche une table des mois
 function tableMois( array $mois):string{
     if(count($mois)==12){
         // my month's table
         $tableauMois='<table>';
-            // fisrt line
-            $tableauMois.='<tr>';
-                $tableauMois.='<td>'.$mois[1].'</td>';
-                $tableauMois.='<td>'.$mois[2].'</td>';
-                $tableauMois.='<td>'.$mois[3].'</td>';
-                $tableauMois.='<td>'.$mois[4].'</td>';
-            $tableauMois.='</tr>';
-            // second line
-            $tableauMois.='<tr>';
-                $tableauMois.='<td>'.$mois[5].'</td>';
-                $tableauMois.='<td>'.$mois[6].'</td>';
-                $tableauMois.='<td>'.$mois[7].'</td>';
-                $tableauMois.='<td>'.$mois[8].'</td>';
-            $tableauMois.='</tr>';
-            // third line
-            $tableauMois.='<tr>';
-                $tableauMois.='<td>'.$mois[9].'</td>';
-                $tableauMois.='<td>'.$mois[10].'</td>';
-                $tableauMois.='<td>'.$mois[11].'</td>';
-                $tableauMois.='<td>'.$mois[12].'</td>';
-            $tableauMois.='</tr>';
+        // fisrt line
+        $tableauMois.='<tr>';
+        $tableauMois.='<td>'.$mois[1].'</td>';
+        $tableauMois.='<td>'.$mois[2].'</td>';
+        $tableauMois.='<td>'.$mois[3].'</td>';
+        $tableauMois.='<td>'.$mois[4].'</td>';
+        $tableauMois.='</tr>';
+        // second line
+        $tableauMois.='<tr>';
+        $tableauMois.='<td>'.$mois[5].'</td>';
+        $tableauMois.='<td>'.$mois[6].'</td>';
+        $tableauMois.='<td>'.$mois[7].'</td>';
+        $tableauMois.='<td>'.$mois[8].'</td>';
+        $tableauMois.='</tr>';
+        // third line
+        $tableauMois.='<tr>';
+        $tableauMois.='<td>'.$mois[9].'</td>';
+        $tableauMois.='<td>'.$mois[10].'</td>';
+        $tableauMois.='<td>'.$mois[11].'</td>';
+        $tableauMois.='<td>'.$mois[12].'</td>';
+        $tableauMois.='</tr>';
         $tableauMois.='</table>';
     }else{
         $tableauMois='';
@@ -64,6 +64,18 @@ function tableMois( array $mois):string{
     return $tableauMois;
 }
 
+// fonction qui affiche une table des mois
+function tableMoisPajuste($mois):string{
+    $taille=count($mois);
+    $tableauMois='<table>';
+    for($i=1;$i<=$taille;$i++){
+        if($i%4==1){$tableauMois.='<tr>';}
+        $tableauMois='<td>'.$mois[$i-1].'</td>';
+        if($i%4==1){$tableauMois.='</tr>';}
+    }
+    $tableauMois.='</table>';
+    return $tableauMois;
+}
 
 
 function AfficheMoisWithContext(string $lang,array $mois,string $flag,string $ref):void{
@@ -88,27 +100,6 @@ echo $affiche;
 
 
 
-
-
-
-
-
-
- /* 
-<div class="champ_de_saisie">
-
-    <?php echo  tableMois($moisFr); ?>
-
-    <!-- ! Mon formulaire pour traiter l'exo -->
-    <form action="index.php" method="post">
-            <!-- La langue anglaise -->
-            <div class="mois_exo_12">
-                <label for="en" class="labels calendar" style="color:navy">en</label>
-                <input type="submit" id="en" class=" radioExo12" name="langue" value="en">
-            </div>
-        <!-- </fieldset> -->
-    </form>
-</div> */
 ?>
 
 
