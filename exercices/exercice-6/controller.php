@@ -24,9 +24,10 @@ if(isset($_POST['validated'])){
 
     // table d'erreur
     $tableError=[];
+    
 
     // validité de la saisie
-    validNombre($a,"a",$tableError);
+    validNombre($a,"a",$tableError);//$tableError["a"]=" Veillez saisir une valeur ";
     validNombre($b,"b",$tableError);
     validNombre($c,"c",$tableError);
 
