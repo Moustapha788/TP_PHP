@@ -5,7 +5,6 @@ session_start();
 include_once("fonctions.php");
 /* includsion de fonctions  */
 include_once("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fonctionsCommunsExercicesAccueil/fonctionsCommuns.php");
-include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu.html.php");
 ?>
 <!-- liens css -->
 <link rel="stylesheet" href="/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/css_accueil/style.css">
@@ -18,11 +17,18 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
 
 <?php 
 
+$_SESSION['post']=$_POST;
+
 $flagFR='flagFR';
 $ref1='index.php';
+$lanFR="langue_fr";
+
+
+
 /* contrôle de la saisie */
 if(isset($_SESSION['post'])):
-    AfficheMoisWithContext('',$moisEn,$flagFR,$ref1);    
+    include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu.html.php");
+    AfficheMoisWithContext('',$moisEn,$flagFR,$ref1,$lanFR);  
 else:
     header("Location:index.php" );
     exit();

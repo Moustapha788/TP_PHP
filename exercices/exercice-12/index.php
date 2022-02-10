@@ -8,24 +8,21 @@ session_start();
 <?php 
 /* inclusion des fonctions */
 include_once("fonctions.php");
-/*  Menu*/ 
-include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu.html.php");
 
 ?>
 
 
 
 <?php
-
-
-
-
 $flagEN='flagEN';
 $ref2='controller.php';
+$lanEN="langue_en";
 
-AfficheMoisWithContext('',$moisFr,$flagEN,$ref2);
 
-    
+/*  Menu*/ 
+include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu.html.php");
+AfficheMoisWithContext('',$moisFr,$flagEN,$ref2,$lanEN);
+
     
     
     
@@ -33,6 +30,7 @@ AfficheMoisWithContext('',$moisFr,$flagEN,$ref2);
     
 include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/defilement.footer.html.php");
     
+// session_destroy();
 
 
 ?>

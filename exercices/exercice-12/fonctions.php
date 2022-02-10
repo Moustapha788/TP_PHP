@@ -65,29 +65,31 @@ function tableMois( array $mois):string{
 }
 
 // fonction qui affiche une table des mois
-function tableMoisPajuste($mois):string{
+function tableMoisAjuste(array $mois):string{
     $taille=count($mois);
-    $tableauMois='<table>';
-    for($i=1;$i<=$taille;$i++){
-        if($i%4==1){$tableauMois.='<tr>';}
-        $tableauMois='<td>'.$mois[$i-1].'</td>';
-        if($i%4==1){$tableauMois.='</tr>';}
+    if($taille==12){
+        $tableauMois='<table>';
+        for($i=1;$i<=$taille;$i++){
+            if($i%4==1){$tableauMois.='<tr>';}
+            $tableauMois='<td>'.$mois[$i].'</td>';
+            if($i%4==0){$tableauMois.='</tr>';}
+        }
+        $tableauMois.='</table>';
+    }else{
+        $tableauMois="";
     }
-    $tableauMois.='</table>';
     return $tableauMois;
 }
 
 
-function AfficheMoisWithContext(string $lang,array $mois,string $flag,string $ref):void{
-    
-
+function AfficheMoisWithContext(string $lang,array $mois,string $flag,string $ref,string $name):void{
 $affiche='<div class="champ_de_saisie">';
     $affiche.=tableMois($mois);
     $affiche.='<form action="'.$ref.'" method="post">';
         $affiche.='<div class="mois_exo_12">';
             $affiche.='<label for="lang" class="labels calendar">'.$lang.'</label>';
-            $affiche.='<input type="hidden" name="langue" value=="fr">';
-            $affiche.='<input type="submit" id="lang" class="'.$flag.'" name="langue" value="'.$lang.'">';
+            // $affiche.='<input type="hidden" name="'.$name.'" value=="fr">';
+            $affiche.='<input type="submit" id="lang" class="'.$flag.'" name="'.$name.'" value="'.$lang.'">';
         $affiche.='</div>';
     $affiche.='</form> ';
 $affiche.='</div>';
