@@ -88,7 +88,7 @@ h3 {
     flex-direction: column;
     background-color: navy;
     color: #fff;
-    font-size: 3em;
+    font-size: 2em;
     padding: 0.5% 4%;
 }
 
@@ -162,12 +162,15 @@ label {
 .valider {
     width: 200px;
     padding: 10px 20px;
+    margin: 1em 0;
     border: none;
     border-radius: 20px;
     font-size: 1.2em;
     text-transform: uppercase;
     background-color: gray;
     color: #fff;
+    position: relative;
+    z-index: 1000;
 }
 
 .valider:hover {
@@ -193,17 +196,19 @@ a {
 
 .recommencer,
 .re-actualiser {
-    display: block;
+    display: flex;
     width: 200px;
-    margin: 2em auto;
-    padding: 0.7em;
+    margin: 4em auto;
+    padding: 1em 1em;
     box-sizing: border-box;
+    text-align: center;
     border-radius: 50px;
     background-color: white;
     text-decoration: none;
     font-size: 1.5em;
     color: navy;
-    text-align: center;
+    position: relative;
+    z-index: 1000;
 }
 
 .recommencer:hover,
@@ -315,4 +320,15 @@ td:hover {
     /* padding: 5%; */
     /* margin: 0.6em 0; */
     /* background-color: #e9a82a; */
+}
+
+
+/* exo 12 */
+
+.champ_texte {
+    /* width: 70%; */
+    font-size: 1.5em;
+    width: 600px;
+    height: 400px;
+    text-align: left;
 }
