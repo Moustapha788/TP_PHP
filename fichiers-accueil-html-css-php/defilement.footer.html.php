@@ -24,3 +24,5 @@ include_once("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fonctionsCommunsExercicesAccu
         </ul>
     </nav>
 </footer>
+
+

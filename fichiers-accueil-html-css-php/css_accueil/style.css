@@ -112,8 +112,9 @@ footer {
     align-items: center;
     background-color: rgba(0, 0, 128, 0.751);
     margin: 5em 0;
-    position: sticky;
-    top: 80vh;
+    position: fixed;
+    top: 70vh;
+    z-index: 5;
 }
 
 footer nav {
