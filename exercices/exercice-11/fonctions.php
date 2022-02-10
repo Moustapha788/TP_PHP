@@ -81,7 +81,7 @@ function AfficherTableauNombres(array $Table):string{
     $affiche='<table>';
     for($i=1;$i<=$taille;$i++){
         if($i%10==1){$affiche.='<tr>';}
-            $affiche.='<td>'.$Table[$i-1].'</td>';
+                $affiche.='<td>'.$Table[$i-1].'</td>';
         if($i%10==0){$affiche.='</tr>';}
     }   
     $affiche.='</table>';
