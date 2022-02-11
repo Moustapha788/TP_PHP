@@ -54,6 +54,17 @@ function validNombre($nbre,string $key,array &$arrError ):void{
         }
     }
 }
+
+// fonction qui permet de générer des erreurs suivant la saisie d'un nombre
+function validDateItem($nbre,string $key,array &$arrError ):void{
+    if(empty($nbre)){
+        $arrError[$key]="Veillez saisir une valeur";
+    }else{
+        if(!is_numeric($nbre)){
+            $arrError[$key]="Veillez saisir un nombre";
+        }
+    }
+}
 // fonction qui permet de générer des erreurs suivant la saisie d'un nombre qui n'est pas supérieur à 10000
 function validNombreTenThousand($nbre,string $key,array &$arrError ):void{
     if(empty($nbre)){
