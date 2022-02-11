@@ -71,7 +71,7 @@ function tableMoisAjuste(array $mois):string{
         $tableauMois='<table>';
         for($i=1;$i<=$taille;$i++){
             if($i%4==1){$tableauMois.='<tr>';}
-            $tableauMois='<td>'.$mois[$i].'</td>';
+            $tableauMois.='<td>'.$mois[$i].'</td>';
             if($i%4==0){$tableauMois.='</tr>';}
         }
         $tableauMois.='</table>';
