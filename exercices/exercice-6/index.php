@@ -30,7 +30,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
             <!-- Saisie de la valeur de a -->
             <div class="champ_de_saisie">
                 <label for="a" class="labels">a</label>
-                <input type="text" id="a" name="a" class="champ_item " value="<?php if(!isset($_SESSION['error']['a']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['a']; else '' ?>" >
+                <input type="text" id="a" name="a" class="champ_item " value="<?php if(!isset($_SESSION['error']['a']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['a']; else '' ?>">
                     
             </div>
             <?php /* if we do a mistake in a */
@@ -42,7 +42,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
             <!-- Saisie de la valeur de b -->
             <div class="champ_de_saisie">
                 <label for="b" class="labels">a</label>
-                <input type="text" id="b" name="b" class="champ_item " value="<?php if(!isset($_SESSION['error']['b']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['a']; else '' ?>" >
+                <input type="text" id="b" name="b" class="champ_item " value="<?php if(!isset($_SESSION['error']['b']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['b']; else '' ?>" >
                     
             </div>
             <?php /* if we do a mistake in b */
@@ -55,7 +55,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
             <!-- Saisie de la valeur de c -->
             <div class="champ_de_saisie">
                 <label for="c" class="labels">a</label>
-                <input type="text" id="c" name="c" class="champ_item " value="<?php if(!isset($_SESSION['error']['c']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['a']; else '' ?>" >
+                <input type="text" id="c" name="c" class="champ_item " value="<?php if(!isset($_SESSION['error']['c']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['c']; else '' ?>" >
                     
             </div>
             <?php /* if we do a mistake in c */

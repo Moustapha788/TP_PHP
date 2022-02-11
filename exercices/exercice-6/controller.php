@@ -39,7 +39,9 @@ if(isset($_POST['validated'])){
         <div class="champ_de_saisie special">
             <p> <?php echo equation2nd_degre($a,$b,$c); ?> </p>
         </div>
-        <?php Recommencer(); ?>
+        <?php   Recommencer(); 
+                session_destroy();
+        ?>
         <?php else:
         $_SESSION['error']=$tableError;
         header('location:/MES_PROJETS/TP_PHP/exercices/exercice-6/index.php'); 
