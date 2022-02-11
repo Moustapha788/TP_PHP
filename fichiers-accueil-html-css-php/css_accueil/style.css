@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 128, 0.25), rgba(0, 0, 128, 0.23)), url(/MES_PROJETS/TP_PHP/images/des-serveurs.png) no-repeat;
+    background: linear-gradient(rgba(0, 0, 128, 0.25), rgba(0, 0, 128, 0.23)), url(/MES_PROJETS/TP_PHP/images/android.jpg) no-repeat;
     background-size: cover;
     font-family: 'Ubuntu';
 }
