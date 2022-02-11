@@ -181,6 +181,7 @@ label {
 
 a {
     text-decoration: none;
+    text-align: center;
 }
 
 
@@ -197,7 +198,7 @@ a {
 
 .recommencer,
 .re-actualiser {
-    display: flex;
+    display: block;
     width: 200px;
     margin: 4em auto;
     padding: 1em 1em;
@@ -318,9 +319,6 @@ td:hover {
     justify-content: center;
     align-items: center;
     color: #fff;
-    /* padding: 5%; */
-    /* margin: 0.6em 0; */
-    /* background-color: #e9a82a; */
 }
 
 
