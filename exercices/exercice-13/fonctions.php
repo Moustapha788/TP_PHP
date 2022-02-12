@@ -41,16 +41,10 @@ Si les paramètres search et replace    sont des tableaux, alors la fonction str
 
 
 
-// fonction qui reconnait si une chaine est un nombre ou non
-function estChainenumeric($chaine):bool{
-    if(is_numeric($chaine)){
-        return true;
-    }
-    return false;
-}
 // function qui qui partage le paragraphe en phrases
 function scinderParagrah(string $paragraph):array{
     $tabPhrases=[];
+    // indique aussi la position de chaque coupure
     // $tabPhrases=preg_split("/((\.+)|((\d{1,})\.(\d{1,})))/", $paragraph,-1, PREG_SPLIT_OFFSET_CAPTURE);
     // $tabPhrases=preg_split("/((\.+)|((\d{1,})\.(\d{1,})))/",$paragraph);
     $tabPhrases=preg_split("/((\.)|((\d{1,})\.(\d{1,})))/",$paragraph);
@@ -62,19 +56,19 @@ et celle à l'intérieur des mots.*/
 function corrigeLaPhrase(string &$phrase):string{
     $phraseAvecEspace=$phrase;
     $phrase='';
-    $cleanMots=strip_tags($phraseAvecEspace);
-    $cleanMots=preg_replace("/((\s{1,}))|(\n)|(\.{1,})/"," ",$cleanMots);
-    $cleanMots=trim($cleanMots);
-    $phrase.=$cleanMots;
+    $cleanPhrases=strip_tags($phraseAvecEspace);
+    $cleanPhrases=preg_replace("/((\s{1,}))|(\n)|(\.{1,})/"," ",$cleanPhrases);
+    // $cleanPhrases=preg_replace("/((\s\s+))|(\n)|(\.{1,})/"," ",$cleanPhrases);
+    $cleanPhrases=trim($cleanPhrases);
+    $phrase.=$cleanPhrases;
     trim($phrase);
     $phrase.='.';
     $phrase=ucfirst(strtolower($phrase));
     return $phrase;
 }
-
 // Fonction qui supprime les caractères spéciaux
 function supprimerSpecialChar(&$str) {
-    $specialChar=array( '%', '@', '\'', ';', '<', '>' ,'#','$','%','&','!','§','!','\n');
+    $specialChar=array( '%', '@', '\'', ';', '<', '>' ,'#','$','%','&','!','§','!','\n','_');
     // remplacer tous les caractères spéciaux par une chaîne 
     return str_replace( $specialChar, ' ', $str);
 }
@@ -84,12 +78,47 @@ function auMoins25Caracteres($phrase):bool{
     $nbrCar=strlen($phrase)-$espaceVide;
     return $nbrCar>=25;
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fonction qui reconnait si une chaine est un nombre ou non
+function estChainenumeric($chaine):bool{
+    if(is_numeric($chaine)){
+        return true;
+    }
+    return false;
+}
 /* fonction qui corrige chaque phrase qui lui donnée en paramètre en enlevant 
 toutes les majuscules qui  et en mettant le premier caractère en majuscules */  
 function corrigeLaCasse(string &$phrase):string{
     $phrase=ucfirst(strtolower($phrase));
     return $phrase;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -105,6 +134,7 @@ echo '<pre>';
     $newParagraph="";
     for ($i=0;$i<$nbrPhrases;$i++){
         $newPhrase=corrigeLaPhrase($tabPhrases[$i]);
+        $newPhrase=supprimerSpecialChar($tabPhrases[$i]);
         $newParagraph.=$newPhrase;
     }
     

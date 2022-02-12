@@ -36,12 +36,6 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
         </div>
     </form>
 
-
-
-
-
-
-
     
     <!-- correction -->
     <div class="champ_de_saisie">
