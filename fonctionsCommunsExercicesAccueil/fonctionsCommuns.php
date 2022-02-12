@@ -2,6 +2,16 @@
 // Constantes définies
 define("VALUE_MINIMUM",10000);
 
+
+// les expressions régulières
+// $lesnombresFlotants
+$lesnombresFlotants="/((\d{1,})\.(\d{1,}))/";
+// numéros sénégal
+$numExpresso="/\b((70)\d{7})\b/";
+$numProMobile="/\b((75)\d{7})\b/";
+$numFree="/\b((76)\d{7})\b/";
+$numOrange1="/\b((77)\d{7})\b/";
+$numOrange2="/\b((78)\d{7})\b/";
 // fonction qui permet de récupérer un chiffre(ici entier) dans une chaîne de caractères
 function filtrerNombre(string $chaine):int{
     $nombre= abs((int)(filter_var($chaine,FILTER_SANITIZE_NUMBER_INT)));

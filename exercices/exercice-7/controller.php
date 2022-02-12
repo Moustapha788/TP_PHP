@@ -31,7 +31,7 @@ if(isset($_POST['validator'])){
    
 
     // sauvegarde des données durant la session
-    $_SESSION['post']=$_POST;
+    $_SESSION['post7']=$_POST;
 
     // table d'erreur
     $tableError=[];

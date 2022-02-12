@@ -32,7 +32,7 @@ $moisEn=array(
     12=>'Décember',
 );
 // fonction qui affiche une table des mois
-function tableMois( array $mois):string{
+function  tableMoisAjuste( array $mois):string{
     if(count($mois)==12){
         // my month's table
         $tableauMois='<table>';
@@ -65,7 +65,7 @@ function tableMois( array $mois):string{
 }
 
 // fonction qui affiche une table des mois
-function tableMoisAjuste(array $mois):string{
+function tableMois(array $mois):string{
     $taille=count($mois);
     if($taille==12){
         $tableauMois='<table>';
@@ -87,8 +87,7 @@ $affiche='<div class="champ_de_saisie">';
     $affiche.=tableMois($mois);
     $affiche.='<form action="'.$ref.'" method="post">';
         $affiche.='<div class="mois_exo_12">';
-            $affiche.='<label for="lang" class="labels calendar">'.$lang.'</label>';
-            // $affiche.='<input type="hidden" name="'.$name.'" value=="fr">';
+            // $affiche.='<label for="lang" class="labels calendar">'.$lang.'</label>';
             $affiche.='<input type="submit" id="lang" class="'.$flag.'" name="'.$name.'" value="'.$lang.'">';
         $affiche.='</div>';
     $affiche.='</form> ';

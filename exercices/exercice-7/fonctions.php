@@ -27,7 +27,7 @@ function numberDays(int $month,int $year):int{
     return $nombreJours;
 }
 // Fonction qui permet de savoir si une date est valide ou pas
-function isValidDate($day,$month,$year):bool{
+function isValidDate(int $day,int $month,int $year):bool{
     if($day>=1 && $day<=numberDays($month,$year)){
         return true;
     }
@@ -110,12 +110,7 @@ function afficheDate(array $date):void{
         $displayDate='<table>';
             $displayDate.='<tr>';
                 $displayDate.='<td> Le ';
-                for($i=1;$i<=$taille;$i++){
-                    $displayDate.=$date[$i];
-                    if($i%3!=0){
-                        $displayDate.='/';
-                    }
-                }
+                    for($i=1;$i<=$taille;$i++){$displayDate.=$date[$i];if($i%3!=0){$displayDate.='/';}}
                 $displayDate.='</td>';
             $displayDate.='</tr>';
         $displayDate.='</table>';

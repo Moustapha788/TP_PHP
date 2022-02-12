@@ -21,24 +21,37 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
 
 
 
-
-
-<form action="controller.php" method="POST">
-    <fieldset>
-        <legend>Généreration  de N champs avec html </legend>
-        <div class="form-groups">
+<div class="champ_de_saisie">
+    <form action="controller.php" method="POST">
+        <div class="champ_de_saisie">
             <!-- champ de saisie -->
+            <label for="paragraph" class="labels">Entrez des phrases puis nous la corrigeons.Une phrase compte au minimum 25 caractères et commence par une majuscule et se termine par un point() .</label>
             <div class="champ_de_saisie">
-                <label for="value_of_N" class="labels">Entrez les N phrases puis nous la corrigeons.Une phrase compte au minimum 25 caractères.</label>
-                <textarea  name="value_of_N" id="value_of_N"  class="champ_texte"  placeholder="J'apprends le codage."></textarea>
+                <textarea  name="paragraph" id="paragraph"  class="champ_texte"  placeholder="J'apprends le codage."></textarea>
             </div>
             <!-- bontou d'envoie -->
             <div class="form-validation">
                 <button type="submit" name="validated" class="valider">Correction</button>
             </div>
         </div>
-    </fieldset>
-</form>
+    </form>
+
+
+
+
+
+
+
+    
+    <!-- correction -->
+    <div class="champ_de_saisie">
+        <textarea  name="" id=""  class="champ_texte" readonly ><?php if (isset( $_SESSION['resultat'])){echo $_SESSION['resultat'];}?>
+        </textarea>
+    </div>
+</div>
+
+
+
 
 
 

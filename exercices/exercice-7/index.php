@@ -35,7 +35,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
 
 
 <!-- ! Mon formulaire pour traiter l'exo -->
-<form action="controller.php" method="post">
+<form action="controller.php" method="post7">
     <fieldset>
         <legend> Date suivante et Date précédente </legend>
         <!-- qu'est ce qu'on attend de vous -->
@@ -45,7 +45,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
             <!-- Saisie  du jour -->
             <div class="champ_de_saisie">
                 <label for="jour" class="labels">jour</label>
-                <input type="text" id="jour" name="jour" class="champ_item " value="<?php if(!isset($_SESSION['error']['jour']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['jour']; else '' ?>" >  
+                <input type="text" id="jour" name="jour" class="champ_item " value="<?php if(!isset($_SESSION['error']['jour']) && isset($_SESSION['post7']) ) echo  $_SESSION['post7']['jour']; else '' ?>" >  
             </div>
             <?php /* if we do a mistake in jour */
                 if(isset($_SESSION['error']['jour'])):?>
@@ -58,7 +58,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
             <!-- Saisie  du mois -->
             <div class="champ_de_saisie">
                 <label for="mois" class="labels">mois</label>
-                <input type="text" id="mois" name="mois" class="champ_item " value="<?php if(!isset($_SESSION['error']['mois']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['mois']; else '' ?>" >  
+                <input type="text" id="mois" name="mois" class="champ_item " value="<?php if(!isset($_SESSION['error']['mois']) && isset($_SESSION['post7']) ) echo  $_SESSION['post7']['mois']; else '' ?>" >  
             </div>
             <?php /* if we do a mistake in mois */
                 if(isset($_SESSION['error']['mois'])):?>
@@ -71,7 +71,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
             <!-- Saisie  du année -->
             <div class="champ_de_saisie">
                 <label for="annee" class="labels">année</label>
-                <input type="text" id="annee" name="annee" class="champ_item " value="<?php if(!isset($_SESSION['error']['annee']) && isset($_SESSION['post']) ) echo  $_SESSION['post']['annee']; else '' ?>" >  
+                <input type="text" id="annee" name="annee" class="champ_item " value="<?php if(!isset($_SESSION['error']['annee']) && isset($_SESSION['post7']) ) echo  $_SESSION['post7']['annee']; else '' ?>" >  
             </div>
             <?php /* if we do a mistake in annee */
                 if(isset($_SESSION['error']['annee'])):?>

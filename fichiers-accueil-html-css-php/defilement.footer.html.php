@@ -4,8 +4,6 @@ include_once("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fonctionsCommunsExercicesAccu
 ?>
 <link rel="stylesheet" href="/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/css_accueil/style.css">
 
-
-
 <footer>
     <nav class="navbar">
         <ul>
