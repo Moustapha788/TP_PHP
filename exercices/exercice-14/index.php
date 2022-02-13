@@ -33,11 +33,11 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
                 <label for="numeros" class="labels">Entrez des numéros de téléphones.Ce qui sont valides sont ceux commençants par 70/75/76/77/78 et  qui font exactement 9 chifrres collés .</label>
                 <!-- champ de saisie -->
                 <div class="champ_de_saisie">
-                    <textarea  name="numeros"  id="numeros"  class="champ_numero"  placeholder="770000000"><?php if (isset( $_SESSION["saisie"])){echo $_SESSION["saisie"];}?></textarea>
+                    <textarea  name="numeros"  id="numeros"  class="champ_numero"  placeholder="770000000"><?php if (isset( $_SESSION["saisie"])){print_r($_SESSION["saisie"]);}?></textarea>
                 </div>
                 <!-- bontou d'envoie -->
                 <div class="form-validation">
-                    <button type="submit" for="#correction" name="validated" class="valider">Correction</button>
+                    <button type="submit" href="#correction" name="validated" class="valider">Correction</button>
                 </div>
             </div>
         </form>
@@ -76,7 +76,7 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
 
 
 
-<?php 
+<?php
 /*  défilement*/
 include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/defilement.footer.html.php");
 ?>

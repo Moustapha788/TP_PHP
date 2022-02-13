@@ -28,7 +28,7 @@ include_once("fonctions.php");
 if(isset($_POST['validated'])  ){
 
     $saisie=$_POST['numeros'];
-    $_SESSION["saisie"]=$_POST;
+    $_SESSION["saisie"]=$saisie;
     // sauvegarde des données durant la session
     $traitementNum=theGreatFunctionForNumbers($saisie);
     // ceux qui sont valides

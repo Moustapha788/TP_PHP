@@ -1,6 +1,5 @@
 <?php
 
-$saisie="781800000 781880000 772265487 751235467 705672334 7056723342  702030304 78180000ffjfgkjefofbvkfkjfffnfvnddyurfkkd  ffhfcfnjrfj 78180000000 781800000 edkd,fk 781800000 781800000 781800000 781800000";
 
 /* 
 781800000 781880000 772265487 751235467 705672334 
@@ -30,8 +29,8 @@ function nettoieLaSaisie(string $saisie):string{
     return $saisie;
 }
 // fonction qui permet de scinder la saisie sous forme de tableaux de numéros 
-function scinderLesNumeros(string $SaisieNettoyee):array{
-    $tabNumero=preg_split("/\s{1,}/",$SaisieNettoyee);
+function scinderLesNumeros(string $saisieNettoyee):array{
+    $tabNumero=preg_split("/\s{1,}/",$saisieNettoyee);
     return $tabNumero;
 }
 // fonction qui permet d'enlever les numéros qui ne sont pas valides globalement
@@ -66,16 +65,16 @@ function afficherNumerosDansUnautreContexte(array $tableauNumero,string $caractN
 }
 // fonction qui permet d'afficher les numéros le contexte d'un texterra
 function afficherNumerosValid(array $tableauNumero,string $op):string{
-    $affiche='  $$$les numéros valides '.$op.' sont au nombre de '.count($tableauNumero).' :';
+    $affiche='&#10;les numéros valides '.$op.' sont au nombre de '.count($tableauNumero).' :&#10;';
     foreach($tableauNumero as $numero){
-        $affiche.=$numero.' ';
+        $affiche.=$numero.'&#10;';
     }
     return $affiche;
 }
 function afficherNumerosInvalid(array $tableauNumero):string{
-    $affiche='  $$$les numéros invalides sont :';
+    $affiche='&#10;les numéros invalides sont :&#10;';
     foreach($tableauNumero as $numero){
-        $affiche.=$numero.' ';
+        $affiche.=$numero.'&#10;';
     }
     return $affiche;
 }
@@ -89,9 +88,9 @@ function theGreatFunctionForNumbers($saisie):array{
     $patterOfAllNumbers="/\b((7(0|[5-8]))(\d{7}))\b/";
 
     // Nettoie la saisie en enlevant tous ce qui n'est pas nombre
-    $SaisieNettoyee=nettoieLaSaisie($saisie);
+    $saisieNettoyee=nettoieLaSaisie($saisie);
     // Scinde la saisie en tableau de nombres
-    $tabNumero=scinderLesNumeros($SaisieNettoyee);
+    $tabNumero=scinderLesNumeros($saisieNettoyee);
     /* VALIDATION DE NUMÉROS*/
     // Récupèration des numéros invalides
     $tabNumeroInvalid=invalidNumbers($patterOfAllNumbers,$tabNumero);
