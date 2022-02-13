@@ -28,7 +28,7 @@ include_once("fonctions.php");
 if(isset($_POST['validated'])  ){
 
     $saisie=$_POST['numeros'];
-    $_SESSION["saisie"]=$saisie;
+    $_SESSION["saisie"]=$_POST['numeros'];
     // sauvegarde des données durant la session
     $traitementNum=theGreatFunctionForNumbers($saisie);
     // ceux qui sont valides
@@ -44,9 +44,9 @@ if(isset($_POST['validated'])  ){
     
 }else{
     // Redirection dans la page index.php
-    header('location:index.php',false);
+    header('location:index.php');
     exit();
 }
-
+if($_SESSION["valid"] && $_SESSION["saisie"] && $_SESSION["invalid"]) session_destroy();
 ?>
 
