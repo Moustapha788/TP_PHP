@@ -115,6 +115,11 @@ h3 {
     font-size: 1.5em;
 }
 
+.champ_item_radio {
+    width: 100px;
+    height: 100px;
+}
+
 .champ_item:focus {
     background-color: #e9a82a;
 }
