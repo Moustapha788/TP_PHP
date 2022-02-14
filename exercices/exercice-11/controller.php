@@ -48,7 +48,7 @@ if (isset($_POST["validated"])){
         </div>
         <?php /*  défilement*/  Recommencer(); include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/defilement.footer.html.php"); 
     else:
-        header("Location:controller.php");
+        header("Location:index.php");
         exit();
     endif;
 
