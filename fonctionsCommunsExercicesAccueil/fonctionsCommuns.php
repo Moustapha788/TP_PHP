@@ -1,6 +1,7 @@
 <?php
 // Constantes définies
 define("VALUE_MINIMUM",10000);
+define("VALUE_MINIMUM_5",5);
 
 
 // les expressions régulières
@@ -65,7 +66,7 @@ function validNombre($nbre,string $key,array &$arrError ):void{
     }
 }
 
-// fonction qui permet de générer des erreurs suivant la saisie d'un nombre
+// EXO6 fonction qui permet de générer des erreurs suivant la saisie d'un nombre
 function validDateItem($nbre,string $key,array &$arrError ):void{
     if(empty($nbre)){
         $arrError[$key]="Veillez saisir une valeur";
@@ -75,7 +76,7 @@ function validDateItem($nbre,string $key,array &$arrError ):void{
         }
     }
 }
-// fonction qui permet de générer des erreurs suivant la saisie d'un nombre qui n'est pas supérieur à 10000
+// EXO11 fonction qui permet de générer des erreurs suivant la saisie d'un nombre qui n'est pas supérieur à 10000
 function validNombreTenThousand($nbre,string $key,array &$arrError ):void{
     if(empty($nbre)){
         $arrError[$key]="Veillez saisir une valeur";
@@ -90,6 +91,23 @@ function validNombreTenThousand($nbre,string $key,array &$arrError ):void{
         }
     }
 }
+// EXO15 fonction qui permet de générer des erreurs suivant la saisie d'un nombre qui n'est pas supérieur à 10000
+function validNombreFive($nbre,string $key,array &$arrError ):void{
+    if(empty($nbre)){
+        $arrError[$key]="Veillez saisir une valeur";
+    }else{
+        if(!is_numeric($nbre)){
+            $arrError[$key]="Veillez saisir un nombre";
+        }
+        else{
+            if($nbre<VALUE_MINIMUM_5){
+                $arrError[$key]="Veillez saisir un nombre supérieur à 5";
+            }
+        }
+    }
+}
+
+
 // fonction réactuliser (pour les exos 1 à 5)
 function reActualiser():void{
     $file=$_SERVER['PHP_SELF'];
