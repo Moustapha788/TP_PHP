@@ -77,6 +77,11 @@ include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/menu
 
 
 <?php
+
+if (isset($_SESSION["valid"]) && isset($_SESSION["invalid"]) && isset($_SESSION["valid"])){
+    // session_destroy();
+}
+
 /*  défilement*/
 include("/opt/lampp/htdocs/MES_PROJETS/TP_PHP/fichiers-accueil-html-css-php/defilement.footer.html.php");
 ?>
